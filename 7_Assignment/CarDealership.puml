@@ -1,0 +1,65 @@
+@startuml
+
+class CarDealerShip{
+
+}
+
+class Car{
+
+}
+class Seller {
+    + list<car> AvailableCars
+    + void : showCars()
+    
+}
+
+class BMW{
+
+}
+
+class Porsche{
+
+}
+
+class Audi{
+
+}
+
+class Mercedes{
+
+}
+
+class OwnCar {
+    +void : sellable()
+    +void : tradeable()
+}
+
+
+BMW -up-|> Car
+Porsche -up-|> Car
+Audi -up-|> Car 
+Mercedes -up-|> Car 
+CarDealerShip -up-|> Seller
+Seller -up- Car
+
+
+class Person {
+    +void : Purchase()
+    +void : Sell()
+    +void : Trade()
+}
+
+class Money {
+    +void : AddMoney()
+    +void : SubtractMoney() 
+}
+class UI{
+    +void : inspect()
+}
+
+Person -left-|> CarDealerShip 
+Person <|-right- Money
+Person -down- OwnCar
+UI -left-|> Person
+
+@enduml

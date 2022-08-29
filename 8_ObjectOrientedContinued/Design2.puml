@@ -1,0 +1,57 @@
+@startuml
+
+class Animal {
+    + void : jump(int height)
+}
+
+class Cat {
+
+}
+
+class Block {
+
+}
+
+class dirt {
+
+}
+
+class grass {
+
+}
+
+class BlockWorld {
+
+}
+
+class Car {
+
+}
+
+class Electric{
+
+}
+
+class gasoline{
+
+}
+
+class Truck {
+
+}
+
+class Pickup{
+
+}
+
+Electric -up-|> Car
+gasoline -up-|> Car
+Truck -up-|> Car
+Pickup -up-|> Truck
+
+Animal -- BlockWorld
+Animal <|-- Cat 
+Dirt --|> block
+grass -up-|> Block
+
+@enduml
