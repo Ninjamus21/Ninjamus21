@@ -1,6 +1,6 @@
-using Store;
+using System;
 
-class seller
+public class Seller
 {
 
 
@@ -28,22 +28,38 @@ class seller
     Car car12 = new Car("BMW iX", 200, "2022", 819000, 9000, 326, "Automatic", 6.1f, 1);
     #endregion BMW
 
+
 public void showCars(){
 
 while(true){
 
     Console.WriteLine("Write an action [Show or exit]");
-    string input = Console.ReadLine();
-
+   string input = Console.ReadLine();
     switch (input)
-    {
-        case "Show":
-            Console.WriteLine("These are the avaliable cars"); 
-            Console.WriteLine(car01.Name);
-            break;
-        case "exit":
-            return;
+        {
+            case "Show":
+                Console.WriteLine("These are the avaliable cars"); 
+                Console.WriteLine("1. " + car01.Name);
+                Console.WriteLine("2. " + car02.Name);
+                Console.WriteLine("3. " + car03.Name);
+                Console.WriteLine("4. " + car04.Name);
+                Console.WriteLine("5. " + car05.Name);
+                Console.WriteLine("6. " + car06.Name);
+                Console.WriteLine("7. " + car07.Name);
+                Console.WriteLine("8. " + car08.Name);
+                Console.WriteLine("9. " + car09.Name);
+                Console.WriteLine("10. " + car10.Name);
+                Console.WriteLine("11. " + car11.Name);
+                Console.WriteLine("12. " + car12.Name);
+                break;
+            case "exit":
+                return;
+            default:
+                return;
+            }
+        }
     }
-}
-}
+    public void tradeCar(){
+        
+    }
 }

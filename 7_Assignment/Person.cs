@@ -1,13 +1,20 @@
+using System;
+class Person{
+    public int Value;
+    public string PersonName;
+    public int OwnedCar;
+    public int PriceOwnedCar;
 
-/*
-using Store;
 
-class person
+
+public Person(int _Value, string _PersonName, int _OwnedCar, int _PriceOwnedCar)
 {
-    public void Purchase()
-    {
-        if Car > 0;
-        Console.WriteLine("The car is Purchaseable! Do you wish to proceed? ");
-    }
+Value =_Value;
+PersonName = _PersonName;
+OwnedCar = _OwnedCar;
+PriceOwnedCar = _PriceOwnedCar;
 }
-*/
+    Person P01 = new Person(100000, "Alucard", 1, 10000);
+
+
+}

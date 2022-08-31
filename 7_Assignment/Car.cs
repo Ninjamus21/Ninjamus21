@@ -1,7 +1,5 @@
 using System;
 
-namespace Store
-{
     class Car
     {
         public string Name;
@@ -18,16 +16,20 @@ namespace Store
 
         public Car(string _Name, int _TopSpeed, string _Generation, int _Price, int _Kilometers, int _HorsePower, string _GearType, float _Zero_Hundred, int _availability)
         {
-            Name = _Name;
-            TopSpeed = _TopSpeed;
-            Generation = _Generation;
-            Price = _Price;
-            Kilometers = _Kilometers;
-            HorsePower = _HorsePower;
-            GearType = _GearType;
-            Zero_Hundred = _Zero_Hundred;
-            availability = _availability;
+            this.Name = _Name;
+            this.TopSpeed = _TopSpeed;
+            this.Generation = _Generation;
+            this.Price = _Price;
+            this.Kilometers = _Kilometers;
+            this.HorsePower = _HorsePower;
+            this.GearType = _GearType;
+            this.Zero_Hundred = _Zero_Hundred;
+            this.availability = _availability;
+        }
+        void InspectCarName(){
+            Console.WriteLine();
         }
         }
-}
+
+
 
