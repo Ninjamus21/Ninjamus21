@@ -39,6 +39,28 @@ while(true){
         {
             case "Show":
                 Console.WriteLine("These are the avaliable cars"); 
+                Console.WriteLine("1. " + car01.Name + car01.availability);
+                Console.WriteLine("2. " + car02.Name + car01.availability);
+                Console.WriteLine("3. " + car03.Name + car01.availability);
+                Console.WriteLine("4. " + car04.Name + car01.availability);
+                Console.WriteLine("5. " + car05.Name + car01.availability);
+                Console.WriteLine("6. " + car06.Name + car01.availability);
+                Console.WriteLine("7. " + car07.Name + car01.availability);
+                Console.WriteLine("8. " + car08.Name + car01.availability);
+                Console.WriteLine("9. " + car09.Name + car01.availability);
+                Console.WriteLine("10. " + car10.Name + car01.availability);
+                Console.WriteLine("11. " + car11.Name + car01.availability);
+                Console.WriteLine("12. " + car12.Name + car01.availability);
+                return;
+            case "exit":
+                return;
+            default:
+                return;
+            }
+        }
+    }
+    public void PreviewCar(){
+    Console.WriteLine("These are the avaliable cars"); 
                 Console.WriteLine("1. " + car01.Name);
                 Console.WriteLine("2. " + car02.Name);
                 Console.WriteLine("3. " + car03.Name);
@@ -51,15 +73,5 @@ while(true){
                 Console.WriteLine("10. " + car10.Name);
                 Console.WriteLine("11. " + car11.Name);
                 Console.WriteLine("12. " + car12.Name);
-                break;
-            case "exit":
-                return;
-            default:
-                return;
-            }
-        }
-    }
-    public void tradeCar(){
-        
     }
 }
