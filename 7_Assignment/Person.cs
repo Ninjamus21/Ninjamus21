@@ -18,9 +18,9 @@ this.PriceOwnedCar = _PriceOwnedCar;
 }
 public void MenuCar(){
     Seller seller = new Seller();
+    Console.WriteLine("Write an action [Buy, sell, Trade or exit]");
 while(true){
 
-    Console.WriteLine("Write an action [Buy, sell, Trade or exit]");
     string input = Console.ReadLine();
     Person P01 = new Person(100000, "Alucard", 1, "Ford Focus", 10000);
     switch (input)
@@ -31,7 +31,12 @@ while(true){
             Console.WriteLine();
             seller.PreviewCar();
             // insert buy mecanic via method 
-     
+            Console.WriteLine("Type the car you what to preview");
+            Console.ReadLine();
+            Console.WriteLine("Yea sure? Type again");
+            break;
+        case "1":
+        Console.WriteLine("pls work");
             break;
         case "Trade":
             if (AvaliableCar < 1){
