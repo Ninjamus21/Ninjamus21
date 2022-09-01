@@ -74,4 +74,13 @@ while(true){
                 Console.WriteLine("11. " + car11.Name);
                 Console.WriteLine("12. " + car12.Name);
     }
+    public void car1(){
+        Console.WriteLine("Excellent choice " + car01.Name + " with at topspeed of " + car01.TopSpeed + "kilometers pr hour. It is the best of its generation of " + car01.Generation + ". But dont think you'll get away this easy it still cost " + car01.Price + "Kr. It has droven " + car01.Kilometers + "km and pulls " + car01.HorsePower + " horses. It has an " + car01.GearType + " motor");
+        if (car01.availability == 0){
+            Console.WriteLine("Yea but we dont currently have the " + car01.Name + " in store, sorry");
+            } else {
+                Console.WriteLine("We have that " + car01.Name + " store are you interrested?");
+            }
+    
  }
+}

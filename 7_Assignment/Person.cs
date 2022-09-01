@@ -36,7 +36,7 @@ while(true){
             Console.WriteLine("Yea sure? Type again");
             break;
         case "1":
-        Console.WriteLine("pls work");
+        seller.car1();
             break;
         case "Trade":
             if (AvaliableCar < 1){
