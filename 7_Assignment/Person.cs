@@ -2,13 +2,13 @@ using System;
 public class Person{
     public int Value;
     public string PersonName;
-    public bool AvaliableCar;
+    public int AvaliableCar;
     public string OwnedCar;
     public int PriceOwnedCar;
 
 
 
-public Person(int _Value, string _PersonName, bool _AvaliableCar, string _OwnedCar, int _PriceOwnedCar)
+public Person(int _Value, string _PersonName, int _AvaliableCar, string _OwnedCar, int _PriceOwnedCar)
 {
 this.Value =_Value;
 this.PersonName = _PersonName;
@@ -22,7 +22,7 @@ while(true){
 
     Console.WriteLine("Write an action [Buy, sell, Trade or exit]");
     string input = Console.ReadLine();
-    Person P01 = new Person(100000, "Alucard", true, "Ford Focus", 10000);
+    Person P01 = new Person(100000, "Alucard", 1, "Ford Focus", 10000);
     switch (input)
     {
         case "Buy":
@@ -30,10 +30,11 @@ while(true){
             Console.WriteLine("These are the avaliable cars"); 
             Console.WriteLine();
             seller.PreviewCar();
-
+            // insert buy mecanic via method 
+     
             break;
         case "Trade":
-            if (AvaliableCar == false){
+            if (AvaliableCar < 1){
                 Console.WriteLine("Hmm, that kinda homeless i see here that you dont currently own a car! ");
             } else {
                 Console.WriteLine("Nice, do you want to trade your " + OwnedCar + " at the price of " + PriceOwnedCar);
