@@ -2,12 +2,29 @@ using System;
 
 public class UI{
     public static void Main(string[] args){
-    Console.WriteLine("Hello, and Welcome to our CarDealership. ");
-    Console.WriteLine("Do you wish to see our selection?");
-    Seller seller = new Seller();
-    seller.showCars();
-    Person P01 = new Person(100000, "Alucard", 1, "Ford Focus", 10000);
-    P01.MenuCar();
+    Seller dealer = new Seller(); //This class you need to create yourself!
+while(true){
+
+    Console.WriteLine("Write an action [buy, sell, exit]");
+    string input = Console.ReadLine();
+
+    switch (input)
+    {
+        case "buy":
+            Car firstCar = dealer.AvailableCars[0];
+            Car myNewCar = dealer.Buy(firstCar);
+            Console.WriteLine("Yay my car cost " + myNewCar.Price + "kr");
+            break;
+        case "sell":
+        
+            break;
+        case "exit":
+            return;
+        default:
+            break;
+    }
+}
+
     
 }
 
