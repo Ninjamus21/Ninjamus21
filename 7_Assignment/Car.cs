@@ -15,7 +15,7 @@ using System;
 
 
 
-        public Car(string _Name, int _TopSpeed, string _Generation, int _Price, int _Kilometers, int _HorsePower, string _GearType, float _Zero_Hundred, int _availability, string id)
+        public Car(string _Name, int _TopSpeed, string _Generation, int _Price, int _Kilometers, int _HorsePower, string _GearType, float _Zero_Hundred, int _availability)
         {
             this.Name = _Name;
             this.TopSpeed = _TopSpeed;

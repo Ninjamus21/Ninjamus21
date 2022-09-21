@@ -18,7 +18,7 @@ this.PriceOwnedCar = _PriceOwnedCar;
 
 }
 
-
+public Car CurrentCar = null;
 }
 
 
