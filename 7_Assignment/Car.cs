@@ -29,6 +29,8 @@ using System;
             this.id = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
             
         }
+        public List<Car> AvailableCars = new List<Car>();
+        
         void InspectCarName(){
             Console.WriteLine();
         }
