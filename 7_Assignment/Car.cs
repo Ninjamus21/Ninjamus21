@@ -31,9 +31,6 @@ using System;
         }
         public List<Car> AvailableCars = new List<Car>();
         
-        void InspectCarName(){
-            Console.WriteLine();
-        }
         }
 
 
