@@ -3,6 +3,7 @@ using System;
 public class Seller
 {
     public List<Car> AvailableCars = new List<Car>();
+
     private float _money;
 
     public Seller()

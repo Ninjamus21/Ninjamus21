@@ -5,7 +5,7 @@ public class Person{
     public int AvaliableCar;
     public string OwnedCar;
     public int PriceOwnedCar;
-
+    
 
 
 public Person(int _Value, string _PersonName, int _AvaliableCar, string _OwnedCar, int _PriceOwnedCar)
