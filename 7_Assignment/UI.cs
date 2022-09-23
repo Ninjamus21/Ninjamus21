@@ -20,6 +20,7 @@ while(true){
         Console.WriteLine("To buy a car you need to copy the correspondent car ID ");
         Console.WriteLine();
         Console.WriteLine("If you haven't got one you can find them under the show section"); 
+        //dealer.Buy();
             break;
         case "show":
         Console.WriteLine();

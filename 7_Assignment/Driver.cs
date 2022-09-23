@@ -7,7 +7,7 @@ public Driver(Boolean _driverstate){
     Person p1 = new Person(10000, "dan", 0, "", 0);
    
    public void TestDrive(){
-        if (p1.AvaliableCar <= 1){
+        if (p1.CurrentCar != null){
             driverstate = true;
         }
 while(driverstate == true){
