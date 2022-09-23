@@ -2,44 +2,62 @@ using System;
 
     
     Seller dealer = new Seller(); 
-    Person p1 = new Person(10000, "", 0, "", 0);
+    Person p1 = new Person(1000000000, "", 0, "", 0);
     Driver p2 = new Driver(false);
+    Kvitering kvit = new Kvitering();
 
     Console.WriteLine("Hello and welcome to the Dealership, What is you name?");
     String PersonName = Console.ReadLine(); 
 
     Console.WriteLine("Welcome " + PersonName);
-while(true){
-
+    Console.WriteLine("Second of all what is your price range?");
+    int Value = Int32.Parse(Console.ReadLine());
+    
+    // menu 
+    while(true){
     Console.WriteLine("Write an action [show, buy, sell, drive or exit]");
     string input = Console.ReadLine();
 
     switch (input)
     {
         case "buy":
-        Console.WriteLine("To buy a car you need to copy the correspondent car ID ");
-        Console.WriteLine();
-        Console.WriteLine("If you haven't got one you can find them under the show section"); 
-        //dealer.Buy();
+        Buy();
             break;
         case "show":
         Console.WriteLine();
-        Console.WriteLine("These are the available cars, " + " if you are interested in purchase one copy the car ID.");
+        Console.WriteLine("These are the available cars, ");
         Console.WriteLine();
-            dealer.ShowCar();
+        dealer.ShowCar();
             break;
             case "drive":
             if (p1.AvaliableCar == 0){
-                Console.WriteLine("you dont seem to own a car you can drive right now");
+                Console.WriteLine(" you dont seem to own a car you can drive right now");
             } else {
                 p2.TestDrive();
             }
             break;
+            case "sell": 
+            p1.sell();
+            break;
+
         case "exit":
             return;
-        default:
+        default: Console.WriteLine("emmm, something here smell fishy, im out.");
             return;
     }
+    void Buy(){ 
+    Car car = dealer.pitch();
+    Console.WriteLine(" Do you want to buy this car? (Y/N) ");
+    if (Console.ReadLine() == "Y"){
+        if(p1.buy(car)){
+            dealer.removeCar(car);
+            kvit.printReceipt(car);
+        }
+    } else{
+    }
+while(true){
 }
 
     Console.ReadLine();
+}
+}

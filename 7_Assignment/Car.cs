@@ -29,8 +29,12 @@ using System;
             this.id = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
             
         }
-        public List<Car> AvailableCars = new List<Car>();
-        
+        public void information(){
+            System.Console.WriteLine("Our " + Name + " from the generation of " + Generation + " rides smoothly");
+            System.Console.WriteLine("You cam expect a topspeed of " + TopSpeed + " it has droven " + Kilometers + "km");
+            System.Console.WriteLine("But it will cost ya " + Price + "kr. lige nu har vi " + availability + " tilbage");
+        }
+
         }
 
 

@@ -4,7 +4,7 @@ public class Driver{
 public Driver(Boolean _driverstate){
     driverstate = _driverstate;
 }
-    Person p1 = new Person(10000, "dan", 0, "", 0);
+    Person p1 = new Person(10000, "dan", 1, "", 100000);
    
    public void TestDrive(){
         if (p1.CurrentCar != null){
@@ -18,12 +18,13 @@ while(driverstate == true){
     switch (input)
     {
         case "EnterCar":
-            Console.WriteLine("you are now entering" + p1.CurrentCar);
+            Console.WriteLine("you are now entering" + p1.CurrentCar.Name);
             break;
         case "Drive":
+            Console.WriteLine("Driving off in the distance with in your " + p1.CurrentCar.Name);
             break;
         case "1-100":
-        
+            Console.WriteLine("Holding still ready to accelerate, the " + p1.CurrentCar.Name + "hits 100 in" + p1.CurrentCar.Zero_Hundred + " in seconds");
             return;
         default:
             return;
