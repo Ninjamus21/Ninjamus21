@@ -46,6 +46,13 @@ public class Seller
 
 
     }
+      public void ShowCar(){
+         foreach (Car c in AvailableCars){
+                        if (c.availability >= 1){
+                        Console.WriteLine(c.Name + " it costs " + c.Price + "kr" + " " + c.id);
+                        }
+    }
+    }
    public Car Buy(Car Car)
     { //Public buy method, which takes a Car as an argument/paramater
         Car returnValueCar = null;
@@ -57,15 +64,10 @@ public class Seller
                     returnValueCar = c;
                 }
             }
-
+        
             return returnValueCar;
+            
     } 
 
-    public void ShowCar(){
-         foreach (Car c in AvailableCars){
-                        if (c.availability >= 1){
-                        Console.WriteLine(c.Name + " it costs " + c.Price + "kr" + " " + c.id);
-                        }
-    }
-    }
+  
 }
