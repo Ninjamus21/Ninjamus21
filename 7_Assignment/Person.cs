@@ -17,30 +17,30 @@ this.OwnedCar = _OwnedCar;
 this.PriceOwnedCar = _PriceOwnedCar;
 
 }
-public void sell()
-    {
-if (AvaliableCar == 1){
-        char Answer;
-        string Ans;
-        string FirstName,LastName,OwnedCar;
-        Console.Write("Which Brand:  ");
-        OwnedCar = Console.ReadLine();
-        Console.Write("First Name: ");
-        FirstName = Console.ReadLine();
-        Console.Write("Last Name:  ");
-        LastName = Console.ReadLine();
+ 
+public void sell(Seller dealer){
+printInv();
+Console.WriteLine("\nWhat would you like to sell?");
+        string key = Console.ReadLine();
+        bool sell = false;
+        foreach (Car car in cars)
+        {
+            if (car.Name + car.Generation == key){
+                sell = true;
+                this.Value = this.Value + car.Price;
+                cars.Remove(car);
+                Console.WriteLine("You sold your car "+car.Generation+" for "+car.Price+"!");
+                dealer.addCar(car);
+                break;
+            }
+             }
+        if (sell == false){
+            Console.WriteLine("\nYou stumbled a bit on your words:");
+            this.sell(dealer);
+        }
+}
 
-        Console.Write("Do you Wish to Sell your own car??? (1=Yes/0=No)? ");
-
-        Ans = Console.ReadLine();
-        Answer = char.Parse(Ans);
-
-        if(Answer == '1')
-        Console.WriteLine("Full Name:   {0} {1}, BilMærke: {2}, Det er super, vi sender dig en købskontrakt.", FirstName, LastName, OwnedCar);
-    } else { 
-        System.Console.WriteLine("You dont currently own a car!");
-    }
-    }
+        
     public bool buy(Car carToBuy){
         if(this.Value>=carToBuy.Price){
         this.Value -= carToBuy.Price;
@@ -54,7 +54,17 @@ if (AvaliableCar == 1){
             return false;  
         }
     }
-    
+     public void printInv(){
+        if(this.cars.Count>0){
+        Console.WriteLine("You have these cars in your inventory: ");
+        foreach (var item in cars)
+        {
+            Console.WriteLine(item.Name + " " + item.Generation);
+        }
+        Console.WriteLine("You Have " + this.Value+ " as your estimated.");
+        }else{
+        Console.WriteLine("You don't own a car, and " + this.Value+ " in your account");}
+    }
 public Car CurrentCar = null;
 }
 

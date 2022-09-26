@@ -90,7 +90,7 @@ public Car pitch(){
         return car;
 
     }
-    private void PreviewInventory(){
+    public void PreviewInventory(){
         foreach (var item in this.AvailableCars)
         {
             Console.WriteLine("En " + item.Name +" af modellen " + item.Generation);

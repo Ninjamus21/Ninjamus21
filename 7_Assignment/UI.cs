@@ -15,7 +15,7 @@ using System;
     
     // menu 
     while(true){
-    Console.WriteLine("Write an action [show, buy, sell, drive or exit]");
+    Console.WriteLine("Write an action [show, buy, sell, inventory, drive or exit]");
     string input = Console.ReadLine();
 
     switch (input)
@@ -37,13 +37,15 @@ using System;
             }
             break;
             case "sell": 
-            p1.sell();
+            p1.sell(dealer);
             break;
-
+        case "inventory":
+        p1.printInv();
+        break;
         case "exit":
             return;
         default: Console.WriteLine("emmm, something here smell fishy, im out.");
-            break;
+            return;
     }
     void Buy(){ 
     Car car = dealer.pitch();
@@ -55,9 +57,6 @@ using System;
         }
     } else{
     }
-while(true){
-}
-
-    Console.ReadLine();
 }
 }
+Console.ReadLine();
