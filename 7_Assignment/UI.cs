@@ -43,7 +43,7 @@ using System;
         case "exit":
             return;
         default: Console.WriteLine("emmm, something here smell fishy, im out.");
-            return;
+            break;
     }
     void Buy(){ 
     Car car = dealer.pitch();
